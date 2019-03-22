@@ -171,55 +171,35 @@ a:focus {
   #COMPONENTS
 \*------------------------------------*/
 
-/*
-    Component: Component name
-    ---
-    Component description
-*/
-
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
-
-/*
-    Utilities: max-width
-    ---
-    Utility classes to put specific max widths onto elements.
-*/
-
 .u-max-width-sm {
     max-width: 36em;
 }
-
-/*
-    Utility: Utility name
-    ---
-    Utility description
-*/
-
-/*------------------------------------*\
-  #MEDIA
-\*------------------------------------*/
-
-/*
-    Media Queries
-    ---
-    EXAMPLE Media Queries for Responsive Design.
-    These examples override the primary ('mobile first') styles.
-    USE THEM INLINE!
-*/
-
-/* Extra small devices (portrait phones, less than 576px)
-   No media query since this is the default in mobile first design
-*/
-
-/* Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {}
-*/
-
-/* Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {}
-*/
+.o-row{
+  padding: 24px 24px 0;
+  display: flex;
+  flex-direction: column;
+}
+.o-row--primary{
+  background-color: #e85e00;
+  color: white;
+}
+.o-row--grey-dark{
+  background-color: #111;
+  color: White;
+}
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .o-row--lg{
+        padding: 48px 48px 0;
+  }
+}
+.o-container{
+  max-width: 90em; /*1440px / standaard font-size 16 = 90 */
+  margin: 0 auto;
+}
 
 /* Large devices (landscape tablets, desktops, 992px and up)
 @media (min-width: 992px) {}
