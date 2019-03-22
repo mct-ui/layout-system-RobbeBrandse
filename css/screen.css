@@ -1,22 +1,19 @@
 /*------------------------------------*\
   #FONTS
 \*------------------------------------*/
-
 /*------------------------------------*\
   #GENERIC
 \*------------------------------------*/
-
 /*
     Generic: Page
     ---
     Global page styles
 */
-
 html {
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
-    color: #111;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  color: #111;
 }
 
 /*
@@ -25,32 +22,29 @@ html {
  *
  * Customize the background color to match your design.
  */
-
 ::-moz-selection {
-    background: #e85e00;
-    color: white;
-    text-shadow: none;
+  background: #e85e00;
+  color: white;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #e85e00;
-    color: white;
-    text-shadow: none;
+  background: #e85e00;
+  color: white;
+  text-shadow: none;
 }
 
 /*------------------------------------*\
   #Elements
 \*------------------------------------*/
-
 /*
     Elements: Images
     ---
     Default markup for images to make them responsive
 */
-
 img {
-    max-width: 100%;
-    vertical-align: top;
+  max-width: 100%;
+  vertical-align: top;
 }
 
 /*
@@ -58,41 +52,40 @@ img {
     ---
     Default markup for typographic elements
 */
-
 h1 {
-    font-family: "Times New Roman", serif;
-    font-size: 36px;
-    font-weight: normal;
-    line-height: 40px;
-    margin: 0 0 24px;
+  font-family: "Times New Roman", serif;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 40px;
+  margin: 0 0 24px;
 }
 
 /* Example inline media query */
 @media (min-width: 768px) {
-    h1 {
-        font-size: 58px;
-        line-height: 64px;
-    }
+  h1 {
+    font-size: 58px;
+    line-height: 64px;
+  }
 }
 
 h2 {
-    font-size: 23px;
-    line-height: 32px;
-    margin: 0 0 24px;
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 24px;
 }
 
 h3 {
-    font-size: 18px;
-    line-height: 24px;
-    margin: 0 0 24px;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 24px;
 }
 
 h4,
 h5,
 h6 {
-    font-size: 16px;
-    line-height: 24px;
-    margin: 0 0 24px;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 24px;
 }
 
 p,
@@ -102,176 +95,323 @@ dl,
 table,
 address,
 figure {
-    margin: 0 0 24px;
+  margin: 0 0 24px;
 }
 
 ul,
 ol {
-    padding-left: 24px;
+  padding-left: 24px;
 }
 
 li ul,
 li ol {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 blockquote {
-    font-style: italic;
-    font-size: 23px;
-    line-height: 32px;
-    margin: 0 0 24px;
-    font-family: "Times New Roman", serif;
+  font-style: italic;
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 24px;
+  font-family: "Times New Roman", serif;
 }
 
 blockquote * {
-    font-size: inherit;
-    line-height: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 figcaption {
-    font-size: 12px;
-    line-height: 16px;
-    padding-top: 8px;
-    color: Grey;
+  font-size: 12px;
+  line-height: 16px;
+  padding-top: 8px;
+  color: Grey;
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    background: LightGrey;
-    margin: 0 0 24px;
+  border: 0;
+  height: 1px;
+  background: LightGrey;
+  margin: 0 0 24px;
 }
 
 a {
-    color: RoyalBlue;
-    transition: all .1s ease-in-out;
+  color: RoyalBlue;
+  transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: BlueViolet;
+  color: BlueViolet;
 }
 
 a:hover,
 a:focus {
-    color: Crimson;
+  color: Crimson;
 }
 
 /*------------------------------------*\
   #OBJECTS
 \*------------------------------------*/
+.o-row {
+  padding: 24px 24px 0;
+  display: flex;
+  flex-direction: column;
+}
 
-/*
-    Object: Object name
-    ---
-    Object description
-*/
+.o-row--primary {
+  background-color: #e85e00;
+  color: white;
+}
+
+.o-row--grey-dark {
+  background-color: #111;
+  color: White;
+}
+
+.o-container {
+  max-width: 90em;
+  /*1440px / standaard font-size 16 = 90 */
+  margin: 0 auto;
+}
+
+.o-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.o-layout__item {
+  width: 100%;
+}
+
+/* gutter modifiers, these affect o-layout__item too */
+.o-layout--gutter {}
+
+.o-layout--gutter>.o-layout__item {}
+
+.o-layout--gutter-sm {}
+
+.o-layout--gutter-sm>.o-layout__item {}
+
+.o-layout--gutter-lg {}
+
+.o-layout--gutter-lg>.o-layout__item {}
+
+/* reverse horizontal row modifier */
+.o-layout--row-reverse {}
+
+/* Horizontal alignment modifiers*/
+.o-layout--justify-start {}
+
+.o-layout--justify-end {}
+
+.o-layout--justify-center {}
+
+.o-layout--justify-space-around {}
+
+.o-layout--justify-space-between {}
+
+/* Vertical item alignment modifiers */
+.o-layout--align-start {}
+
+.o-layout--align-end {}
+
+.o-layout--align-center {}
+
+.o-layout--align-baseline {}
+
+/* Vertical content alignment modifiers. Only work if there is one than one flex item */
+.o-layout--align-content-start {}
+
+.o-layout--align-content-end {}
+
+.o-layout--align-content-center {}
+
+.o-layout--align-content-space-around {}
+
+.o-layout--align-content-space-between {}
 
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+.c-layout-block {
+  background-color: LightGrey;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.c-layout-block--ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
 .u-max-width-sm {
-    max-width: 36em;
+  max-width: 36em;
 }
-.o-row{
-  padding: 24px 24px 0;
-  display: flex;
-  flex-direction: column;
+
+.u-max-width-md {
+  max-width: 45em;
 }
-.o-row--primary{
-  background-color: #e85e00;
-  color: white;
+
+.u-max-width-lg {
+  max-width: 60em;
 }
-.o-row--grey-dark{
-  background-color: #111;
-  color: White;
+
+.u-max-width-xl {
+  max-width: 75em;
 }
+
+.u-max-width-none {
+  max-width: none;
+}
+
+.u-width-auto {}
+
+.u-1-of-2 {
+  width: 50%;
+}
+
+.u-1-of-3 {
+  width: 33.333%;
+}
+
+.u-2-of-3 {
+  width: 66.666%
+}
+
+.u-1-of-4 {
+  width: 25%;
+}
+
+.u-3-of-4 {
+  width: 75%;
+}
+
+.u-1-of-5 {
+  width: 20%;
+}
+
+.u-2-of-5 {
+  width: 40%;
+}
+
+.u-3-of-5 {
+  width: 60%;
+}
+
+.u-4-of-5 {width: 60%;}
+
+.u-1-of-6 {width: 16.6666%;}
+
+.u-5-of-6 {width: 83.333%}
+
+@media (min-width: 576px) {
+  .u-1-of-2-bp1 {}
+}
+
+@media (min-width: 768px) {
+  .u-1-of-2-bp2 {}
+}
+
+@media (min-width: 992px) {
+  .u-1-of-2-bp3 {}
+}
+
+@media (min-width: 1200px) {
+  .u-1-of-2-bp4 {}
+}
+
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-  .o-row--lg{
-        padding: 48px 48px 0;
+  .o-row--lg {
+    padding: 48px 48px 0;
   }
-}
-.o-container{
-  max-width: 90em; /*1440px / standaard font-size 16 = 90 */
-  margin: 0 auto;
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up)
 @media (min-width: 992px) {}
 */
-
 /* Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {}
 */
-
 /*
     Print styles.
     ---
     Inlined to avoid the additional HTTP request:
     http://www.phpied.com/delay-loading-your-print-css/
 */
-
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        /* Black prints faster:
+
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-    /*
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " ("attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " ("attr(title) ")";
+  }
+
+  /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-    /*
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-    thead {
-        display: table-header-group;
-    }
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
