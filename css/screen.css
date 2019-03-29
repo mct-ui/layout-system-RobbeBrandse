@@ -253,7 +253,7 @@ a:focus {
 
 /* Vertical content alignment modifiers. Only work if there is one than one flex item */
 .o-layout--align-content-start {
-  align-content: flex-end;
+  align-content: flex-start;
 }
 
 .o-layout--align-content-end {
