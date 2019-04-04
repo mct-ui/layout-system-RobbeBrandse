@@ -12,12 +12,14 @@
 html {
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, arial, sans-serif;
   color: #111;
   box-sizing: border-box;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
@@ -52,7 +54,7 @@ img {
     Default markup for typographic elements
 */
 h1 {
-  font-family: "Times New Roman", serif;
+  font-family: 'Times New Roman', serif;
   font-size: 36px;
   font-weight: normal;
   line-height: 40px;
@@ -112,7 +114,7 @@ blockquote {
   font-size: 23px;
   line-height: 32px;
   margin: 0 0 24px;
-  font-family: "Times New Roman", serif;
+  font-family: 'Times New Roman', serif;
 }
 
 blockquote * {
@@ -136,7 +138,7 @@ hr {
 
 a {
   color: RoyalBlue;
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 a:visited,
@@ -188,7 +190,7 @@ a:focus {
   margin: 0 -12px;
 }
 
-.o-layout--gutter>.o-layout__item {
+.o-layout--gutter > .o-layout__item {
   padding: 0 12px;
 }
 
@@ -196,7 +198,7 @@ a:focus {
   margin: 0 -6px;
 }
 
-.o-layout--gutter-sm>.o-layout__item {
+.o-layout--gutter-sm > .o-layout__item {
   padding: 0 6px;
 }
 
@@ -204,7 +206,7 @@ a:focus {
   margin: 0 -24px;
 }
 
-.o-layout--gutter-lg>.o-layout__item {
+.o-layout--gutter-lg > .o-layout__item {
   padding: 0 24px;
 }
 
@@ -324,7 +326,7 @@ a:focus {
 }
 
 .u-2-of-3 {
-  width: 66.666%
+  width: 66.666%;
 }
 
 .u-1-of-4 {
@@ -356,7 +358,7 @@ a:focus {
 }
 
 .u-5-of-6 {
-  width: 83.333%
+  width: 83.333%;
 }
 
 @media (min-width: 576px) {
@@ -369,7 +371,7 @@ a:focus {
   }
 
   .u-2-of-3-bp1 {
-    width: 66.666%
+    width: 66.666%;
   }
 
   .u-1-of-4-bp1 {
@@ -401,7 +403,7 @@ a:focus {
   }
 
   .u-5-of-6-bp1 {
-    width: 83.333%
+    width: 83.333%;
   }
 }
 
@@ -415,7 +417,7 @@ a:focus {
   }
 
   .u-2-of-3-bp2 {
-    width: 66.666%
+    width: 66.666%;
   }
 
   .u-1-of-4-bp2 {
@@ -447,7 +449,7 @@ a:focus {
   }
 
   .u-5-of-6-bp2 {
-    width: 83.333%
+    width: 83.333%;
   }
 }
 
@@ -461,11 +463,14 @@ a:focus {
   }
 
   .u-2-of-3-bp3 {
-    width: 66.666%
+    width: 66.666%;
   }
 
   .u-1-of-4-bp3 {
     width: 25%;
+  }
+  .u-2-of-4-bp3 {
+    width: 50%;
   }
 
   .u-3-of-4-bp3 {
@@ -493,7 +498,7 @@ a:focus {
   }
 
   .u-5-of-6-bp3 {
-    width: 83.333%
+    width: 83.333%;
   }
 }
 
@@ -511,7 +516,7 @@ a:focus {
   }
 
   .u-2-of-3-bp4 {
-    width: 66.666%
+    width: 66.666%;
   }
 
   .u-1-of-4-bp4 {
@@ -543,14 +548,14 @@ a:focus {
   }
 
   .u-5-of-6-bp4 {
-    width: 83.333%
+    width: 83.333%;
   }
 }
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
   .o-row--lg {
-    padding: 48px 48px 24px ;
+    padding: 48px 48px 24px;
   }
 }
 
@@ -567,7 +572,6 @@ a:focus {
     http://www.phpied.com/delay-loading-your-print-css/
 */
 @media print {
-
   *,
   *:before,
   *:after {
@@ -585,20 +589,20 @@ a:focus {
   }
 
   a[href]:after {
-    content: " ("attr(href) ")";
+    content: ' (' attr(href) ')';
   }
 
   abbr[title]:after {
-    content: " ("attr(title) ")";
+    content: ' (' attr(title) ')';
   }
 
   /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
+  a[href^='#']:after,
+  a[href^='javascript:']:after {
+    content: '';
   }
 
   pre {
